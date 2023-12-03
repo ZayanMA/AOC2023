@@ -16,7 +16,7 @@ def getCalibrationValues(input):
     print(sum(values))
 
 def main():
-    getCalibrationValues("input.txt")
+    getCalibrationValues("day1input.txt")
 
 if __name__ == "__main__":
     main()

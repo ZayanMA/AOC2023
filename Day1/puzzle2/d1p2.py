@@ -31,11 +31,11 @@ def getCalibrationValues(input):
         values.append(num)
         line = f.readline()
     f.close()
-    print(values)
+    #print(values)
     print(sum(values))
 
 def main():
-    getCalibrationValues("input.txt")
+    getCalibrationValues("day1input.txt")
 
 if __name__ == "__main__":
     main()
