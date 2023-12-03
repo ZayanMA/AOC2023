@@ -23,15 +23,15 @@ def getCalibrationValues(input):
     line = f.readline()
     while line:
         line = line.rstrip()
-        num1 = re.search(r"\d|one|two|three|four|five|six|seven|eight|nine|zero", line).group(0)
-        num2 = re.findall(r"\d|one|two|three|four|five|six|seven|eight|nine|zero", line)[-1]
+        num1 = re.search(r"\d|one|two|three|four|five|six|seven|eight|nine", line).group(0)
+        num2 = re.findall(r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))", line)[-1]
         num1 = wordsToNumbers(num1)
         num2 = wordsToNumbers(num2)
         num = int(num1 + num2)
         values.append(num)
         line = f.readline()
     f.close()
-    #print(values)
+    print(values)
     print(sum(values))
 
 def main():
